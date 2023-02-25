@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  color: #f54b54;
+  background-color: #1d222d;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+html {
+  scroll-behavior: smooth;
+}
+header.navbar-container {
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-block: 1rem;
+  position: fixed;
+  z-index: 999;
+}
+
+header.navbar-container .logo img {
+  width: 150px;
+  color: #f54b54;
+}
+
+header.navbar-container .nav-list ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+  list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #f54b54;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+  background-color: #3e4759;
+  color: #fff;
+}
+
+main {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 2rem 4rem;
+  flex: 2;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+}
+
+main .content {
+  flex: 1;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+main .content .content-description {
+  flex: 1 1;
+}
+
+main .content .content-description .title {
+  font-size: 3.5rem;
+  margin-block: 1rem;
+}
+
+main .content .content-description p {
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+  padding-bottom: 50px;
+}
+
+main .content .content-description #button {
+  padding: 0.8rem 2.5rem;
+  margin-block-start: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+  color: #1d222d;
+
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: #f54b54;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+main .content .content-description #button:hover {
+  border: 3px solid #2d3e50;
+  color: white;
+  background-color: #3e4759;
+}
+
+main .content .content-image {
+  flex: 1;
+  flex-grow: 1;
+  display: flex;
+}
+
+main .content .content-image img {
+  margin: auto;
+  min-width: 250px;
+  width: 300px;
+}
+
+main .sosmed {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+}
+
+main .sosmed .social-media {
+  height: 100%;
+  display: flex;
+}
+
+main .sosmed .social-media ul {
+  padding: 1.5rem 1rem;
+  margin: auto;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  background-color: #1a1a1a;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+main .sosmed .social-media li {
+  list-style-type: none;
+}
+
+main .sosmed .social-media li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #1a1a1a;
+  transition: all 0.1s ease-in-out;
+}
+
+main .sosmed .social-media li a:hover {
+  color: #89b0d9;
+  background-color: #1d222d;
+}
+
+article {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: #3e4759; */
+  margin-top: 20px;
+}
+
+article img {
+  margin: auto;
+  min-width: 250px;
+  width: 300px;
+}
+
+aside {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+aside .content-description {
+  flex: 1 1;
+}
+aside img {
+  margin: auto;
+  min-width: 250px;
+  height: 450px;
+  width: 350px;
+  margin-left: 100px;
+  object-fit: cover;
+}
+footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 15px;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media screen and (max-width: 768px) {
+  header.navbar-container {
+    flex-direction: column;
+  }
+
+  header.navbar-container .nav-list ul {
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+  }
+
+  main {
+    padding: 1rem 3rem;
+  }
+
+  main .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  main .content .content-description .title {
+    font-size: 3rem;
+  }
+
+  main .content .content-description p {
+    font-size: 1rem;
+  }
+
+  main .content .content-image {
+    order: -1;
+  }
+}
+
+/* 
+
+-bikin 1 artikel tentang sepatu beserta gambarnya(png)
+-cari style yang pas untuk card
+-benerin warna yang belum pas
+ */
